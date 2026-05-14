@@ -1,0 +1,6 @@
+model: Random Forest
+params:
+  n_estimators: 200
+  max_depth: 10
+  random_state: 42
+  min_samples_leaf: 100

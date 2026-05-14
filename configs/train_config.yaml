@@ -1,0 +1,33 @@
+data_url: "data/main/Smartphone_Usage_And_Addiction_Analysis_3600_Rows.csv"
+model_type: "RandomForest"
+test_size: 0.2
+random_state: 42
+n_estimators: 100
+max_depth: 10
+numeric_columns:
+  - 'age'
+  - 'daily_screen_time_hours'
+  - 'social_media_hours'
+  - 'gaming_hours'
+  - 'work_study_hours'
+  - 'sleep_hours'
+  - 'notifications_per_day'
+  - 'app_opens_per_day'
+  - 'weekend_screen_time'
+categorical_columns:
+  - 'gender'
+  - 'academic_work_impact'
+minmax_columns: 
+  - "age"
+  - "sleep_hours"
+standard_columns: 
+  - "daily_screen_time_hours"
+  - "social_media_hours"
+  - "gaming_hours"
+  - "work_study_hours"
+  - "notifications_per_day"
+  - "app_opens_per_day"
+  - "weekend_screen_time"
+target: "stress_level"
+min_accuracy: 0.30
+min_f1: 0.30

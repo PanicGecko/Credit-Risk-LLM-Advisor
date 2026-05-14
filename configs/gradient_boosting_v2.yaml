@@ -1,0 +1,6 @@
+model: Gradient Boosting
+params:
+  learning_rate: 0.05
+  max_depth: 10
+  random_state: 42
+  max_iter: 500

@@ -1,0 +1,5 @@
+model: Logistic Regression
+params:
+  C: 1.0
+  max_iter: 100
+  random_state: 42

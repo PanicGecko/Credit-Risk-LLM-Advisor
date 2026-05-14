@@ -1,0 +1,10 @@
+scikit-learn==1.8.0
+pytest==9.0.3
+dvc[s3]==3.67.1
+evidently==0.4.40
+pyyaml==6.0.2
+mlflow==3.11.1
+pandas==2.3.3
+numpy==2.0.2
+scipy==1.11.1
+xgboost==3.2.0

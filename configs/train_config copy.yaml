@@ -1,0 +1,38 @@
+data_url: "data/LC_loans_granting_model_dataset.csv"
+model_type: "Gradient Boosting"
+test_size: 0.2
+config_file: "gradient_boosting_v3.yaml"
+required_columns:
+  - 'revenue'
+  - 'loan_amount'
+  - 'fico_score'
+  - 'issue_year'
+  - 'issue_month'
+  - 'issue_quarter'
+  - 'post_crisis_recovery'
+  - 'loan_to_income'
+  - 'monthly_payment_burden'
+missing_numeric_columns:
+  - 'indebtedness'
+  - 'emp_length'
+missing_categorical_columns:
+  - 'purpose'
+  - 'home_ownership'
+  - 'state'
+  - 'has_experience'
+standard_columns:
+  - 'indebtedness'
+  - 'revenue'
+  - 'loan_amount'
+  - 'loan_to_income'
+  - 'monthly_payment_burden'
+  - 'issue_year'
+minmax_columns: 
+  - 'fico_score'
+  - 'issue_month'
+  - 'issue_quarter'
+  - 'emp_length'
+target: "label"
+min_accuracy: 0.30
+min_f1: 0.30
+random_state: 42
