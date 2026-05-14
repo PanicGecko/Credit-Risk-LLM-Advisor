@@ -236,7 +236,7 @@ if __name__ == "__main__":
     config_path = PROJECT_ROOT / args.config
     config = load_config(config_path)
 
-    metrics = train_model(config, training=args.train)
+    metrics = train_model(training=args.train)
 
     # Exit with error if thresholds not met
     if metrics["accuracy"] < config["min_accuracy"]:
