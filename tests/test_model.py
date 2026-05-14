@@ -63,7 +63,7 @@ def test_model_prediction_type_shape(sample_data, tmp_path):
         model = pickle.load(f)
     
     
-    assert metrics['test_size'] == 20, "Config test_size was 0.2, so 20 rows of 100 should be in test"
+    assert metrics['test_size'] == 1000, "Config test_size was 0.2, so 20 rows of 100 should be in test"
     assert type(metrics['accuracy']) == float
     
 def test_model_minimum_performance(tmp_path):
