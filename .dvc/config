@@ -1,0 +1,6 @@
+[core]
+    remote = public
+['remote "public"']
+    url = https://loan-lending-prediction.s3.us-east-2.amazonaws.com
+['remote "upload"']
+    url = s3://loan-lending-prediction

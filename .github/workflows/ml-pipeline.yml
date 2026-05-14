@@ -37,7 +37,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Pull data with DVC
-        run: dvc pull data/test/sample_loans.csv
+        run: dvc pull data/test/sample_loans.csv.dvc
 
       - name: Run pytest
         run: pytest tests/ -v --tb=short
@@ -71,7 +71,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Pull data with DVC
-        run: dvc pull data/test/sample_loans.csv
+        run: dvc pull data/test/sample_loans.csv.dvc
 
       - name: Train model
         run: python src/train.py
