@@ -8,7 +8,7 @@ from sklearn.ensemble import HistGradientBoostingClassifier
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
 
 from evaluation import evaluate_model
-from train import train_model, CONFIG
+from train import train_model, CONFIG, MODEL_CONFIG
 
 
 @pytest.fixture(scope="module")
