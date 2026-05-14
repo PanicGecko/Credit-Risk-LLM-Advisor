@@ -14,7 +14,7 @@ from sklearn.ensemble import RandomForestClassifier, HistGradientBoostingClassif
 from sklearn.linear_model import LogisticRegression
 from xgboost import XGBClassifier
 sys.path.insert(0, os.path.dirname(__file__))
-from data_preprocess import validate_dataframe, clean_data, encode_categoricals, check_data_quality, select_columns, decode_target, encode_target, norm_preprocessor, rename_cols, date_features, additional_loan_features, map_to_nan, add_missing_indicator
+from data_preprocess import validate_dataframe, clean_data, encode_categoricals, norm_preprocessor, rename_cols, date_features, additional_loan_features, map_to_nan, add_missing_indicator
 from evaluation import evaluate_model, check_thresholds
 from pathlib import Path
 
