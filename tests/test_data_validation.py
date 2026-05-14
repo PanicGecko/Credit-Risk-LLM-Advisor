@@ -6,7 +6,7 @@ import yaml
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
 
-CONFIG_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../configs/train_config copy.yaml"))
+CONFIG_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../configs/train_config.yaml"))
 with open(CONFIG_PATH, "r") as f:
     CONFIG = yaml.safe_load(f)
 
@@ -18,7 +18,7 @@ RAW_COLUMNS = [
 
 @pytest.fixture(scope="module")
 def data():
-    data_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../data/LC_loans_granting_model_dataset.csv"))
+    data_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../data/test/sample_loans.csv"))
     df = pd.read_csv(data_path)
     return df
 
