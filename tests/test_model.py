@@ -54,7 +54,7 @@ def test_model_prediction_type_shape(sample_data, tmp_path):
     test_config["n_estimators"] = 5
     
     # Train the model 
-    metrics = train_model(config=test_config)
+    metrics = train_model()
     
     # Load the trained model to perform predictions
     import pickle
@@ -79,7 +79,7 @@ def test_model_minimum_performance(tmp_path):
     test_config["data_url"] = str(temp_csv)
     
     # It must achieve a minimum performance threshold
-    metrics = train_model(config=test_config)
+    metrics = train_model()
     
     assert metrics["accuracy"] >= test_config["min_accuracy"]
     assert metrics["f1_score"] >= test_config["min_f1"]
