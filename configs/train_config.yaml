@@ -1,7 +1,7 @@
-data_url: "data/LC_loans_granting_model_dataset.csv"
-model_type: "Gradient Boosting"
+data_url: "data/test/sample_loans.csv"
+model_type: "XGBoost"
 test_size: 0.2
-config_file: "gradient_boosting_v3.yaml"
+config_file: "xgboost_test.yaml"
 required_columns:
   - 'revenue'
   - 'loan_amount'
