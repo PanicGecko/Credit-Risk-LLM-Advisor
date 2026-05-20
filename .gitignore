@@ -1,3 +1,7 @@
 /mlruns
 .ipynb_checkpoints/
 .DS_Store
+.venv
+__pycache__
+/artifacts
+.env
