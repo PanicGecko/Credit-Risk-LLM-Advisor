@@ -1,0 +1,15 @@
+.env
+.git
+.gitignore
+/mlruns
+.ipynb_checkpoints/
+.DS_Store
+.venv
+__pycache__
+mlflow.db
+data/
+notebooks/
+*.ipynb_checkpoints
+*.ipynb
+test/
+README.md

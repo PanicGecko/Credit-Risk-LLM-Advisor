@@ -562,18 +562,22 @@ if not st.session_state.messages:
     )
 
 
+def display_content(content, role):
+    text = content.replace("$", r"\$") if role == "user" else content
+    st.markdown(text, unsafe_allow_html=True)
+
+
 # ─── Render conversation history ────────────────────────────────────
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
-        st.markdown(msg["content"], unsafe_allow_html=True)
+        display_content(msg["content"], msg["role"])
 
 
 # ─── Chat input handling ────────────────────────────────────────────
 if prompt := st.chat_input("Describe a loan applicant…"):
-    # Display user message
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
-        st.markdown(prompt)
+        display_content(prompt, "user")
 
     # Generate response
     with st.chat_message("assistant"):

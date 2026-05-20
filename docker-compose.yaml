@@ -1,0 +1,25 @@
+# ──────────────────────────────────────────────────────────────────
+# Credit Risk LLM Advisor — Docker Compose
+# ──────────────────────────────────────────────────────────────────
+# Usage:
+#   1. cp .env.example .env
+#   2. Edit .env and paste your real OpenAI API key
+#   3. docker compose up --build
+#   4. Open http://localhost:8501
+# ──────────────────────────────────────────────────────────────────
+ 
+services:
+  advisor:
+    build: .
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+ 
