@@ -44,6 +44,10 @@ cp .env.example .env
 streamlit run app.py
 ```
 
+### Data source
+
+The dataset is the Lending Club loan data curated by Sanz-Guerrero and Arroyo (2024), available at [zenodo.org/records/11295916](https://zenodo.org/records/11295916). It contains ~1.35 million loans with application-time features and a binary default label.
+
 ### Pulling data with DVC
 
 The dataset and trained model are tracked with DVC and stored in a public S3 bucket. No AWS credentials needed.
